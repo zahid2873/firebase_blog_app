@@ -1,7 +1,10 @@
 import 'package:firebase_blog_app/screen/home_page.dart';
+import 'package:firebase_blog_app/screen/splash_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main()  {
+
   runApp(const MyApp());
 }
 
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: SplashPage(),
     );
   }
 }
