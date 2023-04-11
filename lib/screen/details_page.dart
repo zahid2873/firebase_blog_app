@@ -9,11 +9,11 @@ class DetailsPage extends StatefulWidget {
 }
 
 class _DetailsPageState extends State<DetailsPage> {
-  final Stream<QuerySnapshot> _detailsStream = FirebaseFirestore.instance.collection('users').snapshots();
+  final Stream<QuerySnapshot> _detailsStream = FirebaseFirestore.instance.collection('blog').snapshots();
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
+    return StreamBuilder<QuerySnapshot>(
         stream: _detailsStream,
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot){
           if (snapshot.hasError) {

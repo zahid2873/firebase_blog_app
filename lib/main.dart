@@ -1,10 +1,12 @@
+import 'package:firebase_blog_app/screen/details_page.dart';
 import 'package:firebase_blog_app/screen/home_page.dart';
 import 'package:firebase_blog_app/screen/splash_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main()  {
-
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
